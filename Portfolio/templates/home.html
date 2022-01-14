@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% from 'components/navbar.html' import navbar %}
+{% from 'components/home-content.html' import home_content %}
+{% from 'components/about.html' import about %}
+{%from 'components/portfolio.html' import portfolio %}
+{%from 'components/education.html' import education %}
+{% from 'components/contact.html' import contact %}
+{% from 'components/footer.html' import footer %}
+
+
+{% block title %}Sachin Pokharel - Portfolio Page{% endblock %}
+
+{% block content %}
+
+    <!-- Navbar Section Starts -->
+    {{navbar()}}
+    <!-- Navbar Section Ends-->
+
+    <!-- Home Content Starts -->
+    {{home_content()}}
+    <!-- Home Content Ends -->
+
+    <!-- About Section Starts -->
+    {{about()}}
+    <!-- About Section Ends -->
+
+    <!-- Portfolio Section Starts -->
+    <section id="my-portfolio" data-scroll-index="2">
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="portfolio-title text-center">
+                    <h2>Portfolio</h2>
+                    <p>Check out my portfolio</p>
+                 </div>
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                  {% for items in portfolio_data %}
+                    {{portfolio(items.image, items.img_alt, items.title, items.description)}}
+                  {% endfor %}
+                </div>
+            </div>
+        </div>
+        </section>
+        <!-- Portfolio Section Ends -->
+
+    <!-- Education Section Starts --
+    <section id="my-portfolio" data-scroll-index="3">
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="portfolio-title text-center">
+                    <h2>Education</h2>
+                    <p>Information about my academics</p>
+                 </div>
+                 {{education()}}
+                 </div>
+                 </div>
+                 </section>
+                -->
+    
+
+    <!-- Education Section Ends -->
+
+    <!-- Contact Section Starts -->
+    {{contact()}}
+    <!-- Contact Section Ends -->
+
+    <!-- Footer Section Starts -->]
+    {{footer()}}
+    <!-- Footer Section Ends -->
+
+{% endblock %}

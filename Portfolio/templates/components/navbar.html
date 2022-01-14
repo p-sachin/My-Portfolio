@@ -1,0 +1,31 @@
+{% macro navbar() -%}
+
+<header class="header-content">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-expanded="false" aria-controls="navbarCollapse" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav main ml-auto">
+                    <li class="nav-item">
+                        <a href="#home-content" class="nav-link active" data-scroll-nav="0">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link" data-scroll-nav="1">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link" data-scroll-nav="2">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link" data-scroll-nav="3">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- End Navigation -->
+</header>
+{% endmacro %}
